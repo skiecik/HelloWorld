@@ -15,6 +15,7 @@ public class ReadingFile {
 			while (scan.hasNextLine()) {
 				str.append(scan.nextLine()+ "\n");
 			}
+			scan.close();
 			System.out.println(str);
 		} catch (FileNotFoundException e) {
 			System.out.println("There is no such file.");

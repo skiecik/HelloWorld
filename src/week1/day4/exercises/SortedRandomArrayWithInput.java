@@ -21,7 +21,7 @@ public class SortedRandomArrayWithInput {
 			arr[i] = rand.nextInt(101);
 		}
 		Arrays.sort(arr);
-		
+		scan.close();
 		return arr;
 	}
 	

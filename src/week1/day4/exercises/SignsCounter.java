@@ -16,6 +16,7 @@ public class SignsCounter {
 			}
 			
 			System.out.println("Signs in file: " + counter);
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
