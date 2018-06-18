@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Calculator {
 
-	private List<String> operations;
+	protected List<String> operations;
 
 	public Calculator() {
 		this.operations = new ArrayList<>();
