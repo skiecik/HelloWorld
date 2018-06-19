@@ -11,31 +11,35 @@ public class Calculator {
 		this.operations = new ArrayList<>();
 	}
 
+	public void addToOperations(String operation) {
+		this.operations.add(operation);
+	}
+	
 	public double add(double num1, double num2) {
 		double result = num1 + num2;
 
-		this.operations.add(num1 + " + " + num2 + " = " + result);
+		addToOperations(num1 + " + " + num2 + " = " + result);
 		return result;
 	}
 
 	public double subtract(double num1, double num2) {
 		double result = num1 - num2;
 
-		this.operations.add(num1 + " - " + num2 + " = " + result);
+		addToOperations(num1 + " - " + num2 + " = " + result);
 		return result;
 	}
 
 	public double multiply(double num1, double num2) {
 		double result = num1 * num2;
 
-		this.operations.add(num1 + " * " + num2 + " = " + result);
+		addToOperations(num1 + " * " + num2 + " = " + result);
 		return result;
 	}
 
 	public double divide(double num1, double num2) {
 		if (num2 != 0) {
 			double result = num1 / num2;
-			this.operations.add(num1 + " / " + num2 + " = " + result);
+			addToOperations(num1 + " / " + num2 + " = " + result);
 			return result;
 		} else {
 			System.out.println("Not possible to divide by zero");
