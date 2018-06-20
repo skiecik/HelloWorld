@@ -19,6 +19,11 @@ public class CinemasQuery {
 			String query2 = "SELECT * FROM Tickets WHERE price > 15.30";
 			String query3 = "SELECT * FROM Tickets WHERE quantity > 10";
 			String query4 = "SELECT * FROM Movies WHERE rating > 5.0";
+			String query5 = "SELECT SUM(quantity) FROM Tickets";
+			String query6 = "SELECT COUNT(*) FROM Payments GROUP BY type";
+			String query7 = "SELECT AVG(price) FROM Tickets";
+			String query8 = "SELECT * FROM Payments LIMIT 1,5";
+			String query9 = "SELECT type, COUNT(*) AS size FROM Payments GROUP BY type HAVING size > 2"; 
 			
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(query1);
