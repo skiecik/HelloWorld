@@ -46,7 +46,8 @@ public class TicketManagment {
 				System.out.println("It is not a number");
 				scan.nextLine();
 			}
-			int sold = scan.nextInt();			
+			int sold = scan.nextInt();
+			scan.close();
 			int updateQuantity = quantity - sold;
 			
 			prep = conn.prepareStatement(querySell);
